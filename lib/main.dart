@@ -1,4 +1,5 @@
 // Similar to PSVM in Java
+import 'package:first_app/gradient_container.dart';
 import 'package:flutter/material.dart';
 
 // When you compile dart code, it translates to other langugages.
@@ -10,27 +11,11 @@ import 'package:flutter/material.dart';
 // { } indicates named parameters.
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       // home: Text("Hello World!"),
       home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Color.fromARGB(251, 140, 19, 19),
-                Color.fromARGB(255, 23, 6, 6),
-              ],
-            ),
-          ),
-          child: const Center(
-              child: Text("Hello World!",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 34,
-                  ))),
-        ),
+        body: GradientContainer(),
+  
       ),
     ),
   );
@@ -45,3 +30,5 @@ void main() {
 // }
 
 // namedParamDivide(num2:5, num1:3);
+
+//Scaffold widget nly takes one widget
