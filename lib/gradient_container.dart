@@ -3,21 +3,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  GradientContainer(this.startAlignment, this.endAlignment,{super.key});
+  Alignment startAlignment;
+  Alignment endAlignment;
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
+          begin: startAlignment,
+          end: endAlignment,
+          colors: const [
             Color.fromARGB(251, 140, 19, 19),
             Color.fromARGB(255, 23, 6, 6),
           ],
         ),
       ),
-      child: Centered("Pizza"),
+      child: Center(
+      child: Image.asset(
+        'assets/images/dice-2.png',
+        width: 200,
+        )
+      ),
     );
   }
 }
