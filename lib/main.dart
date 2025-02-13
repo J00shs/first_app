@@ -11,10 +11,10 @@ import 'package:flutter/material.dart';
 // { } indicates named parameters.
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       // home: Text("Hello World!"),
       home: Scaffold(
-        body: GradientContainer(),
+        body: GradientContainer(Alignment.topLeft, Alignment.center),
   
       ),
     ),
