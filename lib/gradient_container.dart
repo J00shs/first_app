@@ -2,6 +2,8 @@ import 'package:first_app/centered.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+
+
 class GradientContainer extends StatelessWidget {
   GradientContainer(this.startAlignment, this.endAlignment,{super.key});
   Alignment startAlignment;
@@ -19,12 +21,7 @@ class GradientContainer extends StatelessWidget {
           ],
         ),
       ),
-      child: Center(
-      child: Image.asset(
-        'assets/images/dice-2.png',
-        width: 200,
-        )
-      ),
-    );
+      child: const Centered("This is so cool!"),
+      );
   }
 }
