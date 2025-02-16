@@ -12,10 +12,9 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
-      // home: Text("Hello World!"),
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: GradientContainer(Alignment.topLeft, Alignment.center),
-  
+        body: GradientContainer(Alignment.topRight, Alignment.bottomLeft),
       ),
     ),
   );
